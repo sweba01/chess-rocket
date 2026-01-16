@@ -5,6 +5,7 @@ import Sidebar from '../components/dashboard/Sidebar'
 import TrainingProgram from '../components/dashboard/TrainingProgram'
 import OpeningTrainer from '../components/dashboard/OpeningTrainer'
 import SidebarWidget from '../components/dashboard/SidebarWidget'
+import Calendar from '../components/dashboard/Calendar'
 
 export default function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -55,8 +56,14 @@ export default function Dashboard() {
             <SidebarWidget />
           </div>
 
-          {/* Opening Trainer */}
-          <OpeningTrainer />
+          {/* Opening Trainer & Calendar Row */}
+          <div className="grid grid-cols-1 xl:grid-cols-[1fr_380px] gap-6">
+            {/* Opening Trainer */}
+            <OpeningTrainer />
+
+            {/* Calendar */}
+            <Calendar />
+          </div>
         </main>
       </div>
     </div>
