@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 // Images
 import chessBoardImg from '../../assets/images/Material Option.png'
+import bossBtnIcon from '../../assets/images/boss-btn.png'
 
 // Icons - we'll use emojis and SVGs for status indicators
 import lockIcon from '../../assets/icons/Icon-11.png'
@@ -148,11 +149,12 @@ function TrainingItem({ item }) {
         )}
 
         {isBoss && (
-          <button className="flex items-center gap-1.5 px-4 py-2 bg-[#ef4444] text-white text-sm font-semibold rounded-full hover:bg-[#dc2626] transition-all duration-300 hover:shadow-lg hover:shadow-[#ef4444]/30 active:scale-95">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-            START
+          <button
+            className="flex items-center gap-1.5 px-4 py-2 text-white text-xs font-semibold rounded-full tracking-[0.6px] uppercase transition-all duration-300 hover:opacity-90 active:scale-95"
+            style={{ backgroundImage: 'linear-gradient(159deg, #ff8904 0%, #e7000b 100%)' }}
+          >
+            <img src={bossBtnIcon} alt="" className="w-4 h-4" />
+            Start
           </button>
         )}
       </div>
@@ -230,7 +232,7 @@ export default function TrainingProgram() {
         </div>
 
         {/* Training Items List */}
-        <div className="p-3 sm:p-4 space-y-2 sm:space-y-3 max-h-[400px] overflow-y-auto">
+        <div className="p-3 sm:p-4 space-y-2 sm:space-y-3">
           {trainingItems.map((item) => (
             <TrainingItem key={item.id} item={item} />
           ))}

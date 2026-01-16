@@ -6,6 +6,7 @@ import TrainingProgram from '../components/dashboard/TrainingProgram'
 import OpeningTrainer from '../components/dashboard/OpeningTrainer'
 import SidebarWidget from '../components/dashboard/SidebarWidget'
 import Calendar from '../components/dashboard/Calendar'
+import RecentActivities from '../components/dashboard/RecentActivities'
 
 export default function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -43,26 +44,24 @@ export default function Dashboard() {
         <TopNav />
 
         {/* Main Content */}
-        <main className="flex-1 px-4 sm:px-6 md:px-10 pb-6 space-y-6">
+        <main className="flex-1 px-4 sm:px-6 lg:px-10 pb-6 space-y-6">
           {/* Content Row - Weekly Challenge Banner */}
           <ContentRow />
 
-          {/* Training Program & Sidebar Widget Row */}
-          <div className="grid grid-cols-1 xl:grid-cols-[1fr_380px] gap-6">
-            {/* Training Program */}
-            <TrainingProgram />
+          {/* Two Column Layout: 66% / 33% */}
+          <div className="flex flex-col xl:flex-row gap-6">
+            {/* Left Column - 66% (Training Program & Opening Trainer) */}
+            <div className="w-full xl:w-[66%] flex flex-col gap-6">
+              <TrainingProgram />
+              <OpeningTrainer />
+            </div>
 
-            {/* Sidebar Widget - Rankings */}
-            <SidebarWidget />
-          </div>
-
-          {/* Opening Trainer & Calendar Row */}
-          <div className="grid grid-cols-1 xl:grid-cols-[1fr_380px] gap-6">
-            {/* Opening Trainer */}
-            <OpeningTrainer />
-
-            {/* Calendar */}
-            <Calendar />
+            {/* Right Column - 33% (Sidebar Widget, Calendar, Community) */}
+            <div className="w-full xl:w-[34%] flex flex-col gap-6">
+              <SidebarWidget />
+              <Calendar />
+              <RecentActivities />
+            </div>
           </div>
         </main>
       </div>
