@@ -3,6 +3,7 @@ import TitleContainer from './components/TitleContainer'
 import SignUpContainer from './components/SignUpContainer'
 import SignUpLink from './components/SignUpLink'
 import Dashboard from './pages/Dashboard'
+import Training from './pages/Training'
 
 function SignUpPage() {
   return (
@@ -29,6 +30,7 @@ function App() {
       <Routes>
         <Route path="/" element={<SignUpPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/training" element={<Training />} />
       </Routes>
     </Router>
   )
