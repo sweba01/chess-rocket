@@ -1,5 +1,5 @@
 import settingsIcon from '../../assets/icons/Icon-13.png'
-import avatarImg from '../../assets/images/Avatar.png'
+import avatarImg from '../../assets/images/image-of-boy.png'
 
 export default function TopNav() {
   return (
