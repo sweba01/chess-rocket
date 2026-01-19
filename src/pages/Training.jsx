@@ -2,6 +2,8 @@ import { useState } from 'react'
 import Sidebar from '../components/dashboard/Sidebar'
 import TrainingTopNav from '../components/training/TrainingTopNav'
 import ProductView from '../components/training/ProductView'
+import CurrentLevelCard from '../components/training/CurrentLevelCard'
+import AllLevels from '../components/training/AllLevels'
 
 export default function Training() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -43,15 +45,11 @@ export default function Training() {
           {/* Product View Banner */}
           <ProductView />
 
-          {/* Placeholder for Card Component (Part 3) */}
-          <div className="min-h-[200px] rounded-2xl border-2 border-dashed border-gray-300 flex items-center justify-center">
-            <p className="text-gray-400 text-lg">Card Component (Part 3)</p>
-          </div>
+          {/* Current Level Card (Part 3) */}
+          <CurrentLevelCard />
 
-          {/* Placeholder for All Levels Component (Part 4) */}
-          <div className="min-h-[200px] rounded-2xl border-2 border-dashed border-gray-300 flex items-center justify-center">
-            <p className="text-gray-400 text-lg">All Levels Component (Part 4)</p>
-          </div>
+          {/* All Levels (Part 4) */}
+          <AllLevels />
         </main>
       </div>
     </div>
