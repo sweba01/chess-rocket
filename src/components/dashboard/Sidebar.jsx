@@ -19,7 +19,7 @@ import coachingIcon from '../../assets/icons/coaching.png'
 import arrowIcon from '../../assets/icons/Next arrow.png'
 
 // User avatar placeholder
-import userAvatar from '../../assets/images/image-of-boy.png'
+import userAvatar from '../../assets/images/Avatar.png'
 
 const navItems = [
   { name: 'Home', icon: homeIcon, path: '/dashboard', hasArrow: true },
@@ -47,7 +47,7 @@ export default function Sidebar({ isOpen, onClose }) {
       <aside
         className={`
           fixed lg:static inset-y-0 left-0 z-50
-          w-70.75 h-screen bg-[#fcfcfc] border-r border-[#eaecf0]
+          w-[283px] h-screen bg-[#fcfcfc] border-r border-[#eaecf0]
           flex flex-col
           transform transition-transform duration-300 ease-in-out
           ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
@@ -76,7 +76,7 @@ export default function Sidebar({ isOpen, onClose }) {
           <div className="flex items-center gap-4">
             {/* Avatar with online indicator */}
             <div className="relative">
-              <div className="w-14.75 h-14.75 rounded-full bg-[#b5e4ca] overflow-hidden">
+              <div className="w-[59px] h-[59px] rounded-full bg-[#b5e4ca] overflow-hidden">
                 <img
                   src={userAvatar}
                   alt="User"
