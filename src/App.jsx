@@ -4,6 +4,10 @@ import SignUpContainer from './components/SignUpContainer'
 import SignUpLink from './components/SignUpLink'
 import Dashboard from './pages/Dashboard'
 import Training from './pages/Training'
+import Topics from './pages/Topics'
+import TopicExpanded from './pages/TopicExpanded'
+import Puzzles from './pages/Puzzles'
+import PuzzleRocketSelect from './pages/PuzzleRocketSelect'
 
 function SignUpPage() {
   return (
@@ -31,6 +35,10 @@ function App() {
         <Route path="/" element={<SignUpPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/training" element={<Training />} />
+        <Route path="/topics" element={<Topics />} />
+        <Route path="/topic-expanded" element={<TopicExpanded />} />
+        <Route path="/puzzles" element={<Puzzles />} />
+        <Route path="/puzzle-rocket-select" element={<PuzzleRocketSelect />} />
       </Routes>
     </Router>
   )
