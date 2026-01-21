@@ -32,7 +32,8 @@ export default function PuzzleRocketSelect() {
         <div className="lg:hidden flex items-center px-4 py-3 border-b border-[#eaecf0]">
           <button
             onClick={() => setSidebarOpen(true)}
-            className="p-2 hover:bg-[#f4f4f4] rounded-lg transition-colors"
+            className="p-2 hover:bg-[#f4f4f4] rounded-lg transition-colors cursor-pointer min-w-[44px] min-h-[44px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-[#6366f1] focus:ring-offset-2"
+            aria-label="Open menu"
           >
             <svg
               className="w-6 h-6 text-[#6f767e]"

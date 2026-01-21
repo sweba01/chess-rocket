@@ -19,15 +19,16 @@ export default function CategoryTabs({
             key={category.id}
             onClick={() => onCategoryChange?.(category.id)}
             className={`
-              flex-1 flex items-center justify-center px-3 sm:px-2 py-[4px] rounded-[37px]
-              transition-all duration-200 whitespace-nowrap
+              flex-1 flex items-center justify-center px-3 sm:px-2 py-[10px] min-h-[44px] rounded-[37px]
+              transition-all duration-200 whitespace-nowrap cursor-pointer
+              focus:outline-none focus:ring-2 focus:ring-[#6366f1] focus:ring-inset
               ${isActive ? 'bg-white' : 'hover:bg-white/30'}
             `}
           >
             <span
               className={`
                 text-[13px] sm:text-[14px] font-medium leading-[1.55] text-center font-['Manrope',sans-serif]
-                ${isActive ? 'text-black' : 'text-[#818898]'}
+                ${isActive ? 'text-black' : 'text-[#64748b]'}
               `}
             >
               {category.label}

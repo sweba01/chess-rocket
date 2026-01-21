@@ -10,9 +10,10 @@ export default function StartButton({
       className={`
         w-full flex items-center justify-center px-[24px] py-[16px] rounded-[48px]
         transition-all duration-200
+        focus:outline-none focus:ring-2 focus:ring-[#615fff] focus:ring-offset-2
         ${disabled
           ? 'opacity-50 cursor-not-allowed'
-          : 'hover:opacity-90 hover:scale-[1.01] active:scale-[0.99]'
+          : 'cursor-pointer hover:opacity-90 hover:shadow-lg active:opacity-95'
         }
       `}
       style={{

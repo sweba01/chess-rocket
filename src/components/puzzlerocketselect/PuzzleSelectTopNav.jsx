@@ -1,15 +1,14 @@
 import { useNavigate } from 'react-router-dom'
-import avatarImg from '../../assets/images/Avatar.png'
 
 export default function PuzzleSelectTopNav({ backTo = '/puzzles', backLabel = 'Back to Puzzles' }) {
   const navigate = useNavigate()
 
   return (
-    <nav className="flex items-center justify-between w-full h-[60px] sm:h-[72px] px-4 sm:px-6 lg:px-10">
-      {/* Left - Back Button */}
+    <nav className="flex items-center w-full h-[60px] sm:h-[72px] px-4 sm:px-6 lg:px-10">
+      {/* Back Button */}
       <button
         onClick={() => navigate(backTo)}
-        className="flex items-center gap-1 sm:gap-2 group"
+        className="flex items-center gap-1 sm:gap-2 group cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#6366f1] focus:ring-offset-2 rounded-lg"
       >
         {/* Back Arrow Icon */}
         <div className="w-[29px] h-[29px] flex items-center justify-center rounded-lg transition-colors group-hover:bg-[#f4f4f4]">
@@ -36,17 +35,6 @@ export default function PuzzleSelectTopNav({ backTo = '/puzzles', backLabel = 'B
           {backLabel}
         </span>
       </button>
-
-      {/* Right - Profile Avatar */}
-      <div className="relative">
-        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-[#b5e4ca] cursor-pointer hover:border-[#6366f1] transition-colors">
-          <img
-            src={avatarImg}
-            alt="Profile"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
     </nav>
   )
 }
