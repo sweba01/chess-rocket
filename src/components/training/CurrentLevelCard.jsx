@@ -106,12 +106,14 @@ function TrainingItem({ item }) {
       <div className="flex items-center gap-4">
         <StatusIndicator status={item.status} />
         <div className="flex flex-col gap-0.5">
-          <span className={`
-            text-base font-semibold leading-6
-            ${isActive ? 'text-[#4f39f6]' : ''}
-            ${isCompleted ? 'text-[#1a1d1f]' : ''}
-            ${isLocked || isBoss ? 'text-[#6f767e]' : ''}
-          `}>
+          <span
+            className={`
+              text-base font-semibold leading-6
+              ${isActive ? 'text-[#4f39f6]' : ''}
+              ${isCompleted ? 'text-[#1a1d1f]' : ''}
+              ${isLocked || isBoss ? 'text-[#6f767e]' : ''}
+            `}
+          >
             {item.title}
           </span>
           <span className="text-xs text-[#7b7b7b] font-medium tracking-[-0.12px]">
@@ -120,7 +122,6 @@ function TrainingItem({ item }) {
         </div>
       </div>
 
-      {/* Action buttons */}
       <div className="flex-shrink-0">
         {isCompleted && (
           <button className="flex items-center gap-1.5 text-[#008236] text-xs font-semibold hover:opacity-80 transition-opacity">
@@ -164,27 +165,18 @@ export default function CurrentLevelCard() {
 
   return (
     <div className="relative">
-      {/* Current Level Label */}
       <div className="bg-[#6366f1] rounded-t-[25px] py-2 px-6">
         <p className="text-center text-white text-xs font-medium tracking-wide">
           Current Level
         </p>
       </div>
 
-      {/* Main Card */}
       <div className="bg-[#fcfcfc] rounded-b-[25px] border-[1.5px] border-t-0 border-[rgba(123,123,123,0.1)] overflow-hidden">
-        {/* Level Info Section */}
         <div className="p-3 sm:p-4 flex flex-col sm:flex-row gap-4">
-          {/* Chess Board Image */}
           <div className="w-[120px] sm:w-[140px] h-[80px] sm:h-[90px] rounded-[16px] overflow-hidden flex-shrink-0 bg-[#f4f2ef]">
-            <img
-              src={chessBoardImg}
-              alt="Chess Board"
-              className="w-full h-full object-cover"
-            />
+            <img src={chessBoardImg} alt="Chess Board" className="w-full h-full object-cover" />
           </div>
 
-          {/* Level Details */}
           <div className="flex flex-col justify-center gap-2 py-2">
             <h3 className="text-xl sm:text-2xl font-semibold text-[#1a1d1f] tracking-[-0.24px] leading-8">
               Level 3: Opening Principles
@@ -193,9 +185,7 @@ export default function CurrentLevelCard() {
               Progress through all rating levels from 500 to mastery
             </p>
 
-            {/* Progress Section */}
             <div className="flex items-center gap-3 mt-1">
-              {/* Progress Bar */}
               <div className="w-[88px] h-2 bg-[rgba(5,6,15,0.05)] rounded overflow-hidden">
                 <div
                   className="h-full bg-[#6366f1] rounded-full transition-all duration-500"
@@ -203,28 +193,14 @@ export default function CurrentLevelCard() {
                 />
               </div>
 
-              {/* Progress Percentage */}
-              <div className="flex items-center gap-1">
-                <svg className="w-4 h-4 text-[#7b7b7b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
-                </svg>
-                <span className="text-xs text-[#7b7b7b] font-medium">{progress}%</span>
-              </div>
-
-              {/* Time */}
-              <div className="flex items-center gap-1">
-                <svg className="w-4 h-4 text-[#7b7b7b] opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span className="text-xs text-[#7b7b7b] font-medium">90 min</span>
-              </div>
+              <span className="text-xs text-[#7b7b7b] font-medium">{progress}%</span>
+              <span className="text-xs text-[#7b7b7b] font-medium">90 min</span>
             </div>
           </div>
         </div>
 
-        {/* Training Items List */}
         <div className="px-3 sm:px-4 pb-4 space-y-3">
-          {trainingItems.map((item) => (
+          {trainingItems.map(item => (
             <TrainingItem key={item.id} item={item} />
           ))}
         </div>

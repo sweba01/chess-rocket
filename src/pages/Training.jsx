@@ -5,6 +5,8 @@ import ProductView from '../components/training/ProductView'
 import CurrentLevelCard from '../components/training/CurrentLevelCard'
 import AllLevels from '../components/training/AllLevels'
 
+
+
 export default function Training() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
