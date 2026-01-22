@@ -10,9 +10,9 @@ const ClockIcon = () => (
   </svg>
 )
 
-// Survival/Timer Icon Component - 20x20px
+// Survival/Timer Icon Component - 24x24px
 const SurvivalIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M12 6V12L16 14" stroke="#101010" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     <circle cx="12" cy="12" r="9" stroke="#101010" strokeWidth="1.5" />
     <path d="M12 2V4" stroke="#101010" strokeWidth="1.5" strokeLinecap="round" />
@@ -30,10 +30,10 @@ const InfoIcon = () => (
 )
 
 const durations = [
-  { id: '1min', label: '1 min', value: 1, width: '120px' },
-  { id: '3min', label: '3 min', value: 3, width: '120px' },
-  { id: '5min', label: '5 min', value: 5, width: '120px' },
-  { id: 'survival', label: 'Survival', value: 'survival', width: '145px', hasIcon: true }
+  { id: '1min', label: '1 min', value: 1, width: '140px' },
+  { id: '3min', label: '3 min', value: 3, width: '140px' },
+  { id: '5min', label: '5 min', value: 5, width: '140px' },
+  { id: 'survival', label: 'Survival', value: 'survival', width: '177px', hasIcon: true }
 ]
 
 export default function DurationSelector({
@@ -89,7 +89,7 @@ export default function DurationSelector({
         </div>
 
         {/* Duration Buttons - 42596:6169 */}
-        <div className="grid grid-cols-2 sm:flex sm:items-center sm:justify-center gap-2 sm:gap-[12px]">
+        <div className="grid grid-cols-2 sm:flex sm:items-center sm:justify-center gap-2 sm:gap-[14px]">
           {durations.map((duration) => (
             <DurationButton
               key={duration.id}

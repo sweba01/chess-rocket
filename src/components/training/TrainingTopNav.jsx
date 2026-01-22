@@ -1,13 +1,24 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import avatarImg from '../../assets/images/Avatar.png'
 
 export default function TrainingTopNav() {
   const [activeTab, setActiveTab] = useState('levelClimb')
+  const navigate = useNavigate()
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab)
+    if (tab === 'topics') {
+      navigate('/topics')
+    } else {
+      navigate('/training')
+    }
+  }
 
   return (
     <nav className="flex items-center justify-between w-full h-[72px] px-4 sm:px-6 lg:px-10 py-6">
       {/* Left - Page Title */}
-      <h1 className="text-xl sm:text-2xl font-bold leading-8 text-[#1a1d1f] font-['Inter_Display',sans-serif]">
+      <h1 className="text-xl sm:text-2xl font-bold leading-8 text-[#1a1d1f] font-['Inter',sans-serif]">
         Training Program
       </h1>
 
@@ -15,12 +26,12 @@ export default function TrainingTopNav() {
       <div className="hidden sm:flex items-center gap-2">
         {/* Level Climb Tab */}
         <button
-          onClick={() => setActiveTab('levelClimb')}
+          onClick={() => handleTabClick('levelClimb')}
           className={`
-            flex items-center gap-2 h-10 px-5 pr-4 rounded-full text-sm font-semibold transition-all duration-300
+            flex items-center gap-2 h-10 pl-5 pr-4 rounded-full text-sm font-semibold font-['Manrope',sans-serif] transition-all duration-300
             ${activeTab === 'levelClimb'
-              ? 'bg-[#6366f1] text-white'
-              : 'bg-white text-[#818898] hover:bg-gray-50'
+              ? 'bg-[#7a7cf3] text-white'
+              : 'bg-[#1a1d1f] text-[#6f767e] hover:bg-[#2a2d2f]'
             }
           `}
         >
@@ -54,12 +65,12 @@ export default function TrainingTopNav() {
 
         {/* Topics Tab */}
         <button
-          onClick={() => setActiveTab('topics')}
+          onClick={() => handleTabClick('topics')}
           className={`
-            flex items-center gap-2 h-10 px-5 pr-4 rounded-full text-sm font-semibold transition-all duration-300
+            flex items-center gap-2 h-10 pl-6 pr-4 rounded-full text-sm font-semibold font-['Manrope',sans-serif] transition-all duration-300
             ${activeTab === 'topics'
-              ? 'bg-[#6366f1] text-white'
-              : 'bg-white text-[#818898] hover:bg-gray-50'
+              ? 'bg-[#7a7cf3] text-white'
+              : 'bg-[#1a1d1f] text-[#6f767e] hover:bg-[#2a2d2f]'
             }
           `}
         >
@@ -76,7 +87,7 @@ export default function TrainingTopNav() {
 
       {/* Right - Profile Avatar */}
       <div className="relative">
-        <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#b5e4ca] cursor-pointer hover:border-[#6366f1] transition-colors">
+        <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#b5e4ca] cursor-pointer hover:border-[#7a7cf3] transition-colors">
           <img
             src={avatarImg}
             alt="Profile"

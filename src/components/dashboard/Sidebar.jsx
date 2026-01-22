@@ -16,6 +16,7 @@ import puzzlesIcon from '../../assets/icons/puzzle.png'
 import communityIcon from '../../assets/icons/community.png'
 import openingsIcon from '../../assets/icons/opening.png'
 import coachingIcon from '../../assets/icons/coaching.png'
+import topicsIcon from '../../assets/icons/Icon.png'
 import arrowIcon from '../../assets/icons/Next arrow.png'
 
 // User avatar placeholder
@@ -24,6 +25,7 @@ import userAvatar from '../../assets/images/Avatar.png'
 const navItems = [
   { name: 'Home', icon: homeIcon, path: '/dashboard', hasArrow: true },
   { name: 'Training', icon: trainingIcon, path: '/training' },
+  { name: 'Topics', icon: topicsIcon, path: '/topics' },
   { name: 'Puzzles', icon: puzzlesIcon, path: '/puzzles' },
   { name: 'Community', icon: communityIcon, path: '/community' },
   { name: 'Openings', icon: openingsIcon, path: '/openings' },

@@ -1,13 +1,61 @@
 @import "tailwindcss";
 
+/* ===================
+   DESIGN TOKENS (Tailwind v4)
+   From Figma: Chess Rocket Design System
+   =================== */
+@theme {
+  /* Brand Colors */
+  --color-brand-purple: #7a7cf3;
+  --color-brand-purple-hover: #6366f1;
+
+  /* Text Colors */
+  --color-text-primary: #fcfcfc;
+  --color-text-secondary: #6f767e;
+  --color-text-dark: #1a1d1f;
+
+  /* Background Colors */
+  --color-bg-dark: #111315;
+  --color-bg-card: #1a1d1f;
+  --color-bg-card-hover: #222528;
+  --color-bg-elevated: #272b30;
+
+  /* UI Colors */
+  --color-ui-border: #2a2d2f;
+  --color-ui-divider: #33383d;
+  --color-ui-muted: #818898;
+
+  /* Accent Colors */
+  --color-accent-green: #b5e4ca;
+  --color-accent-green-light: #bff1d3;
+  --color-accent-blue: #d8f0ff;
+  --color-accent-purple: #f5edfa;
+
+  /* Status Colors */
+  --color-status-success: #4ade80;
+  --color-status-warning: #fbbf24;
+  --color-status-error: #ef4444;
+
+  /* Font Families */
+  --font-heading: 'Inter', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--font-body);
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #ffffff;
+  color-scheme: dark;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-dark);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,11 +65,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--color-brand-purple);
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: var(--color-brand-purple-hover);
 }
 
 body {
@@ -31,8 +79,9 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  line-height: 1.2;
 }
 
 button {
@@ -41,15 +90,6 @@ button {
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
+  outline: 2px solid var(--color-brand-purple);
+  outline-offset: 2px;
 }
